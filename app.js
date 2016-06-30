@@ -10,6 +10,12 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+const mongoose = require('mongoose');
+const mongoUrl = process.env.MONGODB_URI || 'mongodb://localhost/properties';
+mongoose.connect(mongoUrl, err => {
+  console.log(err || `MongoDB connected to ${mongoUrl}`);
+})
+
 const app = express();
 const server = http.createServer(app);
 
