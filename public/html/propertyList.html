@@ -1,1 +1,29 @@
 <h1>Property List</h1>
+
+<div class="propertyListArea">
+  <div class="propertyCard" ng-repeat='property in properties track by $index'>
+    <img class='img-responsive' src="http://www.hotel-r.net/im/hotel/fr/beautiful-apartment-12.jpg" alt="">
+    <h3>{{property.name}}</h3>
+    <p class='description text-italic'>{{property.description}}</p>
+    <h5 class='rentHeader'>Rent per Unit:</h5>
+    <span class='rentAmount'>
+      {{property.rent | currency}}
+    </span>
+    <div class="row occupancyRow">
+      <div class="col-xs-6">
+        <span class='occHeader'>Occupancy</span>
+      </div>
+      <div class="col-xs-6">
+        <span class='occHeader'>Capacity</span>
+      </div>
+    </div>
+    <div class="row occupancyRow">
+      <div class="col-xs-6">
+        <span class='number'>{{property.tenants.length}}</span>
+      </div>
+      <div class="col-xs-6">
+        <span class='number'>{{property.units}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,11 +7,22 @@ const propertySchema = new mongoose.Schema({
     type: String,
     required: [ true, `You didn't name your property?` ]
   },
+  description: {
+    type: String,
+    default: 'No description added.'
+  },
+  rent: {
+    type: Number,
+    min: 400,
+    max: 100000,
+    required: true
+  },
   photo: {
     type: String,
     match: /^http:\/\/.+\.\w+/i,
     trim: true,
-    message: `That is not a picture!`
+    message: `That is not a picture!`,
+    default: 'http://www.kalahandi.info/wp-content/uploads/2016/05/sorry-image-not-available.png'
   },
   units: {
     type: Number,

@@ -1,0 +1,33 @@
+.propertyCard {
+  border: 1px solid #000;
+  height: 350px;
+  width: 275px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  margin: 9px;
+  position: relative;
+  vertical-align: top;
+}
+.propertyCard > .img-responsive {
+  border-radius: 10px 10px 0px 0px;
+  height: 182px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.description {
+  text-overflow: ellipsis;
+}
+
+.propertyCard > h3 {
+  margin-top: 4px;
+}
+
+.rentHeader {
+  margin: 1px 1px;
+}
+
+.occupancyRow {
+
+}

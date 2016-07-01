@@ -16,15 +16,17 @@ head
   script(src="/js/controllers/menuCtrl.js")
   script(src="/js/controllers/propertiesCtrl.js")
   script(src="/js/controllers/tenantsCtrl.js")
+  
+  script(src="/js/services/Property.js")
   //- script(src="/js/services/service.js")
   
-body(ng-app='myApp', controller='mainCtrl')
+body(ng-app='myApp', ng-controller='mainCtrl')
   .container-fluid
     .topBar
       h1 #{title}
     .viewsArea
       .row
-        .col-xs-3(ui-view='menu')
-        .col-xs-9(ui-view='right')
+        .col-xs-2(ui-view='menu')
+        .col-xs-10(ui-view='right')
     
   
