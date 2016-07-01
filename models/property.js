@@ -9,7 +9,7 @@ const propertySchema = new mongoose.Schema({
   },
   photo: {
     type: String,
-    match: /^http:\/\/www\..+\.\w+/i,
+    match: /^http:\/\/.+\.\w+/i,
     trim: true,
     message: `That is not a picture!`
   },

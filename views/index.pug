@@ -12,8 +12,19 @@ head
   
   script(src="/js/module.js")
   script(src="/js/controllers/mainCtrl.js")
+  script(src="/js/controllers/homeCtrl.js")
+  script(src="/js/controllers/menuCtrl.js")
+  script(src="/js/controllers/propertiesCtrl.js")
+  script(src="/js/controllers/tenantsCtrl.js")
   //- script(src="/js/services/service.js")
   
-body(ng-app='myApp')
-  h1 #{title}
+body(ng-app='myApp', controller='mainCtrl')
+  .container-fluid
+    .topBar
+      h1 #{title}
+    .viewsArea
+      .row
+        .col-xs-3(ui-view='menu')
+        .col-xs-9(ui-view='right')
+    
   

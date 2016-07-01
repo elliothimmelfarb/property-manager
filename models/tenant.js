@@ -28,7 +28,7 @@ const tenantSchema = new mongoose.Schema({
     match: /^\w+@\w+\.\w+$/,
     message: `That is not a valid email address!`
   },
-  property: {type: mongoose.Schema.Types.ObjectId, ref: 'Property'}
+  property: {type: mongoose.Schema.Types.ObjectId, ref: 'Property', default: null}
 })
 
 const Tenant = mongoose.model('Tenant' ,tenantSchema)

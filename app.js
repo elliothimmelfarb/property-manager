@@ -44,7 +44,7 @@ app.use('/api', require('./routes/api'));
 ////////////////////////////////
 
 app.get('/', (req, res) => {
-  res.render('index', {title: 'Set the title in app.js get to "/"'});
+  res.render('index', {title: 'Property Manager'});
 });
 
 // catch 404 and forward to error handler

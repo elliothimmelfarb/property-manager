@@ -1,0 +1,42 @@
+<h1>Add Property</h1>
+<form class="form" ng-submit='addProperty(property)'>
+  <div class="form-inline">
+    <div class="form-group">
+      <!-- <label>Property Name</label> -->
+      <input type="text" class="form-control" ng-model='property.name' placeholder="Name">
+    </div>
+    <div class="form-group">
+      <!-- <label>Description</label> -->
+      <textarea type="text" class="form-control" ng-model='property.description' placeholder="Description"></textarea>
+    </div>
+  </div>
+  <div class="form-inline">
+    <div class="input-group">
+      <div class="input-group-addon">$</div>
+      <input type="number" min='400' max='100000' step='100' class="form-control" ng-model='property.rent' placeholder="Rent">
+      <div class="input-group-addon">.00</div>
+    </div>
+    <div class="form-group">
+      <label># of Units</label>
+      <select class="form-control" ng-model='property.units'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>5</option>
+        <option value='7'>5</option>
+        <option value='8'>5</option>
+      </select>
+    </div>
+    <!-- <div class="form-group">
+    <label>Description</label>
+    <input type="number" min='400' max='100000' step='100' class="form-control" ng-model='property.rent' placeholder="Rent"> -->
+  </div>
+
+  <div class="form-inline">
+    <input type="text" class="form-control" ng-model='property.photo' placeholder="http://[Link to Photo]">
+    <button type="submit" class="btn btn-default">Add New Property</button>
+  </div>
+
+</form>
